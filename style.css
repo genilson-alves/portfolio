@@ -5,35 +5,49 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.portfolioNav {
+.portfolio-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 30px;
+  background-color: black;
 }
 
-.contacts {
-  display: flex;
-  gap: 10px;
+.title {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
 }
 
 .informations {
   display: flex;
   gap: 10px;
+  margin: 20px;
 }
 
-.navLinks {
-  font-weight: bold;
-  color: black;
+.contacts img {
+  width: 30px;
+}
+
+.other-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-image img {
+  width: 300px;
+  float: left;
+}
+
+.nav-links {
   text-decoration: none;
-  padding: 10px;
-  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px;
 }
 
-.navLinks:hover {
-  background-color: black;
-  text-decoration: underline;
-  text-decoration-color: white;
-  color: white;
-  transition: 0.3s;
+.nav-links:hover {
+  color: black;
+  background-color: white;
 }
