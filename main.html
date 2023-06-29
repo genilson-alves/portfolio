@@ -11,28 +11,37 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="media.css" />
     <link rel="icon" href="./icons/favicon.ico" />
   </head>
   <body>
-    <nav class="portfolio-navigation">
-      <a href="#" class="page-title">Eu.eu</a>
-      <div class="navigation">
-        <a href="#" class="navigation-link">Sobre</a>
-        <a href="#" class="navigation-link">Tecnologias</a>
-        <a href="#" class="navigation-link">Projetos</a>
-      </div>
-      <div class="contacts">
-        <a href="https://github.com/genilson-alves" target="_blank"
-          ><img src="icons/github.svg"
-        /></a>
-        <a href="https://www.linkedin.com/in/genilson-alves0/" target="_blank"
-          ><img src="icons/linkedin.svg"
-        /></a>
-      </div>
-    </nav>
+    <header>
+      <nav class="portfolio-navigation">
+        <a href="#" class="logo">Eu.eu</a>
+        <div class="hamburguer">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="navigation">
+          <li><a href="#" class="navigation-link">Sobre</a></li>
+          <li><a href="#" class="navigation-link">Tecnologias</a></li>
+          <li><a href="#" class="navigation-link">Projetos</a></li>
+        </ul>
+        <div class="contacts">
+          <a href="https://github.com/genilson-alves" target="_blank"
+            ><img src="icons/github.svg"
+          /></a>
+          <a href="https://www.linkedin.com/in/genilson-alves0/" target="_blank"
+            ><img src="icons/linkedin.svg"
+          /></a>
+        </div>
+      </nav>
+    </header>
     <main class="main-all">
       <div class="title">
-        <h1>Olá. Seja bem vindo!</h1>
+        <h1>Olá.</h1>
+        <h2>Seja bem vindo!</h2>
       </div>
       <div class="main-content">
         <div class="informations-image"></div>
@@ -42,7 +51,7 @@
             Eu me chamo Genilson e sou desenvolvedor front-end, com foco
             principalmente em
             <strong>React e Javascript</strong>, também já cheguei a utilizar
-            <strong>Bootstrap</strong> para a criação de websites.
+            <strong>Bootstrap</strong> para a criação de alguns projetos.
           </p>
         </div>
       </div>
@@ -103,7 +112,9 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <p class="copyright">Design and Code &copy; 2023 Genilson</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
