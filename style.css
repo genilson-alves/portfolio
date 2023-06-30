@@ -15,17 +15,32 @@
   text-decoration: none;
 }
 
+.portfolio-navigation {
+  margin: 20px 10px 0px;
+}
+
 .hamburguer {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: black;
+  display: none;
+}
+
+.hamburguer img {
+  width: 30px;
+}
+
+.x {
+  background-color: black;
+  border: none;
   cursor: pointer;
   display: none;
 }
 
-.hamburguer div {
-  width: 32px;
-  height: 2px;
-  margin: 8px;
-  background: black;
-  margin: 8px;
+.x img {
+  background-color: black;
+  width: 20px;
 }
 
 .portfolio-navigation {
