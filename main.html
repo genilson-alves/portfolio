@@ -4,25 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="media.css" />
     <link rel="icon" href="./icons/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <nav class="portfolio-navigation">
+      <nav class="portfolio-navigation" id="portfolio-navigation">
         <a href="#" class="logo">Eu.eu</a>
         <button class="hamburguer" onclick="toggleSidebar()">
           <img src="icons/hamburguer.svg" />
         </button>
         <ul class="nav-links" id="nav-links">
-          <button class="x" onclick="toggleSidebar()">
+          <button class="close-button" onclick="toggleSidebar()">
             <img src="icons/x-mark-256.png" />
           </button>
           <li>
@@ -38,22 +37,26 @@
             <a href="#" class="navigation-links">Contato</a>
           </li>
         </ul>
-        <div class="contatoss">
-          <a href="#" target="_blank"><img src="icons/github.svg" /></a>
-          <a href="#" target="_blank"><img src="icons/linkedin.svg" /></a>
+        <div class="navigation-contact">
+          <a href="https://github.com/genilson-alves" target="_blank"
+            ><img src="icons/github.svg"
+          /></a>
+          <a href="https://www.linkedin.com/in/genilson-alves0/" target="_blank"
+            ><img src="icons/linkedin.svg"
+          /></a>
         </div>
       </nav>
     </header>
-    <main class="main-all">
+    <main class="main-page">
       <div class="title">
         <h1>Olá.</h1>
         <h2>Seja bem vindo!</h2>
       </div>
       <div class="main-content">
-        <div class="informations-image"></div>
-        <div class="informations">
-          <h1 class="informations-title">Desenvolvedor Front-end</h1>
-          <p class="informations-info">
+        <div class="information-image"></div>
+        <div class="information">
+          <h1 class="information-title">Desenvolvedor Front-end</h1>
+          <p class="information-content">
             Eu me chamo Genilson e sou desenvolvedor front-end, com foco
             principalmente em
             <strong>React e Javascript</strong>, também já cheguei a utilizar
@@ -61,11 +64,10 @@
           </p>
         </div>
       </div>
-
       <div class="title">
         <h1>Tecnologias</h1>
       </div>
-      <div class="tecnologias">
+      <div class="technologies">
         <img src="icons/react.png" />
         <img src="icons/javascript.png" />
         <img src="icons/bootstrap.png" />
@@ -76,7 +78,7 @@
       <div class="title">
         <h1>Projetos</h1>
       </div>
-      <div class="projetos">
+      <div class="projects">
         <div class="col">Em breve...</div>
         <div class="col">Em breve...</div>
         <div class="col">Em breve...</div>
@@ -87,12 +89,12 @@
       <div class="title">
         <h1>Contato</h1>
       </div>
-      <div class="contato">
-        <div class="contatos">
+      <div class="contact">
+        <div class="contact-text">
           <h2>Onde me encontrar:</h2>
         </div>
-        <div class="contato-info">
-          <div class="contact-infoa">
+        <div class="contact-information">
+          <div class="contact-me">
             <img src="icons/linkedin.svg" />
             <a
               href="https://www.linkedin.com/in/genilson-alves0/"
@@ -101,25 +103,25 @@
               Genilson Alves Ferreira da Silva
             </a>
           </div>
-          <div class="contact-infoa">
+          <div class="contact-me">
             <img src="icons/github.svg" />
             <a href="https://github.com/genilson-alves" target="_blank"
               >genilson-alves</a
             >
           </div>
-          <div class="contact-infoa">
+          <div class="contact-me">
             <img src="icons/gmail.png" />
             genilson.alves9555@gmail.com
           </div>
-          <div class="contact-infoa">
+          <div class="contact-me">
             <img src="icons/whatsapp.png" />
             +55 41 9 8531-9395
           </div>
         </div>
       </div>
     </main>
-    <footer>
-      <p class="copyright">Design and Code &copy; 2023 Genilson</p>
+    <footer class="copyright">
+      <p>Design and Code &copy; 2023 Genilson</p>
     </footer>
     <script src="script.js"></script>
   </body>
