@@ -8,7 +8,6 @@
 
 :root {
   --blue: #22333b;
-  --almost-white: #eae0d5;
 }
 
 .title {
@@ -30,10 +29,35 @@
 }
 
 .main-content,
-.contact,
-.projects {
+.projects,
+.contact {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.main-content {
   display: flex;
-  background-color: var(--almost-white);
+  background-image: linear-gradient(to right, #f6c4ed, #fbe9d7);
+}
+
+.more {
+  text-align: center;
+  margin: 25px;
+}
+
+.more a {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px;
+  border: 3px solid #001d3d;
+  background-color: white;
+  font-size: 15px;
+}
+
+.more a:hover {
+  background-color: #001d3d;
+  color: white;
+  transition: 0.5s;
 }
 
 .information {
@@ -44,18 +68,35 @@
   text-align: justify;
 }
 
-.col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--blue);
-  color: white;
-}
-
 .technologies {
   display: flex;
   gap: 30px;
   justify-content: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  margin: 0px 0px 30px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.projects {
+  background-color: #001d3d;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
+
+.contact {
+  background-color: #e3e3e3;
 }
 
 .contact-text {
@@ -135,11 +176,24 @@
     width: 100%;
     height: 100%;
     list-style: none;
-    margin-left: -200%;
+    margin-top: -200%;
     background-color: black;
+    animation-duration: 1s;
+    z-index: 2;
+  }
+
+  @keyframes showSidebar {
+    from {
+      margin-top: -200%;
+    }
+    to {
+      margin-top: 0%;
+    }
   }
 
   .navigation-links {
+    font-size: 15px;
+    font-weight: bold;
     color: white;
     text-decoration: none;
   }
@@ -166,21 +220,13 @@
   }
 
   .technologies {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .technologies img {
-    width: 30px;
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 0px 0px 30px;
-    padding: 20px;
-    border-radius: 15px;
+    justify-self: center;
+    width: 60px;
   }
 
   .col {
@@ -262,17 +308,26 @@
   }
 
   .projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    background-color: var(--almost-white);
     padding: 50px;
-    border-radius: 15px;
   }
 
   .col {
+    width: 100%;
+    display: flex;
     border-radius: 15px;
     height: 300px;
+  }
+
+  .project-image {
+    width: 100px;
+  }
+
+  .project-image img {
+    width: 100%;
+  }
+
+  .project-information {
+    width: 60%;
   }
 
   .contact {
@@ -349,12 +404,7 @@
   }
 
   .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    background-color: var(--almost-white);
     padding: 50px;
-    border-radius: 15px;
   }
 
   .col {
@@ -363,6 +413,7 @@
   }
 
   .contact {
+    display: flex;
     padding: 30px;
     border-radius: 15px;
   }

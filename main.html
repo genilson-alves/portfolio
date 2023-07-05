@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="./icons/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,16 +24,33 @@
             <img src="icons/x-mark-256.png" />
           </button>
           <li>
-            <a href="#" class="navigation-links">Sobre</a>
+            <a href="#about" class="navigation-links" onclick="toggleSidebar()"
+              >Sobre</a
+            >
           </li>
           <li>
-            <a href="#" class="navigation-links">Tecnologias</a>
+            <a
+              href="#technologies"
+              class="navigation-links"
+              onclick="toggleSidebar()"
+              >Tecnologias</a
+            >
           </li>
           <li>
-            <a href="#" class="navigation-links">Projetos</a>
+            <a
+              href="#projects"
+              class="navigation-links"
+              onclick="toggleSidebar()"
+              >Projetos</a
+            >
           </li>
           <li>
-            <a href="#" class="navigation-links">Contato</a>
+            <a
+              href="#contacts"
+              class="navigation-links"
+              onclick="toggleSidebar()"
+              >Contato</a
+            >
           </li>
         </ul>
         <div class="navigation-contact">
@@ -47,8 +63,8 @@
         </div>
       </nav>
     </header>
-    <main class="main-page">
-      <div class="title">
+    <main class="main-page" id="main-page">
+      <div class="title" id="about">
         <h1>Olá.</h1>
         <h2>Seja bem vindo!</h2>
       </div>
@@ -57,14 +73,15 @@
         <div class="information">
           <h1 class="information-title">Desenvolvedor Front-end</h1>
           <p class="information-content">
-            Eu me chamo Genilson e sou desenvolvedor front-end, com foco
-            principalmente em
-            <strong>React e Javascript</strong>, também já cheguei a utilizar
-            <strong>Bootstrap</strong> para a criação de alguns projetos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro et
+            fugiat quae tempore tempora minima quis illum pariatur quo accusamus
+            excepturi, quod soluta veritatis totam quam ipsum iure quaerat
+            ipsam? Você pode checar os meus projetos clicando
+            <a href="#" target="_blank">aqui</a>
           </p>
         </div>
       </div>
-      <div class="title">
+      <div class="title" id="technologies">
         <h1>Tecnologias</h1>
       </div>
       <div class="technologies">
@@ -75,18 +92,32 @@
         <img src="icons/css.png" />
         <img src="icons/python.png" />
       </div>
-      <div class="title">
+      <div class="title" id="projects">
         <h1>Projetos</h1>
       </div>
       <div class="projects">
-        <div class="col">Em breve...</div>
-        <div class="col">Em breve...</div>
-        <div class="col">Em breve...</div>
-        <div class="col">Em breve...</div>
+        <div class="col">
+          <div class="project-image">
+            <img src="./icons/anime-search.png" />
+          </div>
+          <div class="project-information">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
+            repudiandae inventore facilis deserunt sunt molestias consectetur
+            delectus ratione voluptas labore, omnis totam, ab quasi atque facere
+            eius. Maiores, aliquid dolores!
+          </div>
+        </div>
         <div class="col">Em breve...</div>
         <div class="col">Em breve...</div>
       </div>
-      <div class="title">
+      <div class="more">
+        <a
+          href="https://github.com/genilson-alves?tab=repositories"
+          target="_blank"
+          >Veja mais</a
+        >
+      </div>
+      <div class="title" id="contacts">
         <h1>Contato</h1>
       </div>
       <div class="contact">
