@@ -11,7 +11,7 @@ function toggleSidebar() {
     navigation.style.position = "fixed";
     portfolioNavigation.style.marginTop = "0px";
   } else {
-    navigation.style.marginTop = "-200%";
+    navigation.style.marginTop = "-500%";
     portfolioNavigation.style.marginTop = "20px";
     navigation.style.animationName = "";
   }
