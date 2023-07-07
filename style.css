@@ -3,14 +3,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  color: var(--blue);
 }
 
 :root {
-  --blue: #001d3d;
-  --gray: #e3e3e3;
-  --white: #ffffff;
-  --black: #000000;
+  --background-color: #ffffff;
+  --text-color: #001d3d;
+  --primary-gradient: #f6d5f7;
+  --secondary-gradient: #fbe9d7;
+  --projects-color: #001d3d;
+  --contacts-color: #e3e3e3;
 }
 
 .title {
@@ -32,6 +33,15 @@
 }
 
 .main-content,
+.title,
+.col,
+.contact-me,
+.contact-text,
+a {
+  color: var(--text-color);
+}
+
+.main-content,
 .projects,
 .contact {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -39,7 +49,11 @@
 
 .main-content {
   display: flex;
-  background-image: linear-gradient(to right, #f6c4ed, #fbe9d7);
+  background-image: linear-gradient(
+    to right,
+    var(--primary-gradient),
+    var(--secondary-gradient)
+  );
 }
 
 .more {
@@ -49,20 +63,20 @@
 
 .more a {
   padding: 10px;
-  background-color: var(--blue);
-  border: 3px solid var(--blue);
+  background-color: var(--text-color);
+  border: 3px solid var(--text-color);
   border-radius: 15px;
   font-size: 15px;
   text-decoration: none;
-  color: var(--white);
+  color: var(--background-color);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .more a:hover {
-  background-color: var(--white);
-  color: var(--blue);
+  background-color: var(--background-color);
+  color: var(--text-color);
   text-decoration: underline;
-  border: 3px solid var(--blue);
+  border: 3px solid var(--text-color);
   transition: 0.5s;
 }
 
@@ -90,7 +104,16 @@
 }
 
 .projects {
-  background-color: var(--blue);
+  background-color: var(--projects-color);
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: var(--background-color);
+  min-height: 200px;
 }
 
 .project-image {
@@ -100,7 +123,8 @@
 
 .project-image img {
   width: 100%;
-  border: 3px solid var(--blue);
+  max-width: 700px;
+  border: 3px solid var(--text-color);
   border-radius: 20px;
 }
 
@@ -139,18 +163,8 @@
   width: 25px;
 }
 
-.col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  background-color: var(--white);
-  color: var(--black);
-  min-height: 200px;
-}
-
 .contact {
-  background-color: var(--gray);
+  background-color: var(--contacts-color);
 }
 
 .contact-text {
@@ -198,7 +212,7 @@
   }
 
   .hamburguer {
-    background-color: var(--white);
+    background-color: var(--background-color);
   }
 
   .hamburguer img {
@@ -231,14 +245,14 @@
     height: 100%;
     list-style: none;
     margin-top: -500%;
-    background-color: var(--black);
+    background-color: black;
     animation-duration: 1s;
     z-index: 2;
   }
 
   @keyframes showSidebar {
     from {
-      margin-top: -200%;
+      margin-top: -500%;
     }
     to {
       margin-top: 0%;
@@ -248,7 +262,7 @@
   .navigation-links {
     font-size: 15px;
     font-weight: bold;
-    color: var(--white);
+    color: white;
     text-decoration: none;
   }
 
