@@ -16,7 +16,7 @@
   <body>
     <header>
       <nav class="portfolio-navigation" id="portfolio-navigation">
-        <a href="#" class="logo">Eu.eu</a>
+        <a href="#" class="logo" data-nav-logo>Eu.eu</a>
         <button class="hamburguer" onclick="toggleSidebar()">
           <img src="icons/hamburguer.svg" />
         </button>
@@ -25,7 +25,11 @@
             <img src="icons/x-mark-256.png" />
           </button>
           <li>
-            <a href="#about" class="navigation-links" onclick="toggleSidebar()"
+            <a
+              href="#about"
+              class="navigation-links"
+              onclick="toggleSidebar()"
+              data-nav-about
               >Sobre</a
             >
           </li>
@@ -33,6 +37,7 @@
             <a
               href="#technologies"
               class="navigation-links"
+              data-nav-technologies
               onclick="toggleSidebar()"
               >Tecnologias</a
             >
@@ -42,6 +47,7 @@
               href="#projects"
               class="navigation-links"
               onclick="toggleSidebar()"
+              data-nav-projects
               >Projetos</a
             >
           </li>
@@ -50,11 +56,18 @@
               href="#contacts"
               class="navigation-links"
               onclick="toggleSidebar()"
+              data-nav-contact
               >Contato</a
             >
           </li>
         </ul>
         <div class="navigation-contact">
+          <a title="English" data-english-flag
+            ><img src="icons/united-states.png"
+          /></a>
+          <a title="Portuguese" data-brazil-flag class="brazil-flag"
+            ><img src="icons/brazil-.png"
+          /></a>
           <a href="https://github.com/genilson-alves" target="_blank"
             ><img src="icons/github.svg"
           /></a>
@@ -64,173 +77,355 @@
         </div>
       </nav>
     </header>
-    <main class="main-page" id="main-page">
-      <div class="title" id="about">
-        <h1>Olá.</h1>
-        <h2>Seja bem vindo!</h2>
-      </div>
-      <div class="main-content">
-        <div class="information-image"></div>
-        <div class="information">
-          <h1 class="information-title">Desenvolvedor Front-end</h1>
-          <p class="information-content">
-            Eu me chamo Genilson e sou desenvolvedor Front-end com foco
-            principal em <strong>JavaScript e ReactJS</strong>.
-          </p>
+    <div class="portuguese">
+      <main class="main-page" id="main-page">
+        <div class="title" id="about">
+          <h1>Olá.</h1>
+          <h2>Seja bem vindo!</h2>
         </div>
-      </div>
-      <div class="title" id="technologies">
-        <h1>Tecnologias</h1>
-      </div>
-      <div class="technologies">
-        <img src="icons/react.png" />
-        <img src="icons/javascript.png" />
-        <img src="icons/bootstrap.png" />
-        <img src="icons/html.png" />
-        <img src="icons/css.png" />
-        <img src="icons/python.png" />
-      </div>
-      <div class="title" id="projects">
-        <h1>Projetos</h1>
-      </div>
-      <div class="projects">
-        <div class="col">
-          <div class="project-image">
-            <img src="./icons/news.png" />
+        <div class="main-content">
+          <div class="information-image"></div>
+          <div class="information">
+            <h1 class="information-title">Desenvolvedor Front-end</h1>
+            <p class="information-content">
+              Eu me chamo Genilson e sou desenvolvedor Front-end com foco
+              principal em <strong>JavaScript e ReactJS</strong>.
+            </p>
           </div>
-          <div class="project-information">
-            <h1 class="project-title">News</h1>
-            <p class="project-paragraph">
-              Uma página feita para que se possa ficar atualizado com as
-              notícias ao redor do mundo. Para a sua criação foi usado
-              <strong
-                >JavaScript, HTML, CSS e três APIs:
-                <a href="https://gnews.io/docs/v4" target="_blank">NewsAPI</a>,
-                <a href="https://www.weatherapi.com/docs/" target="_blank"
-                  >WeatherAPI</a
-                >
-                e
-                <a
-                  href="https://docs.awesomeapi.com.br/api-de-moedas"
-                  target="_blank"
-                  >MarketAPI</a
-                ></strong
-              >.
+        </div>
+        <div class="title" id="technologies">
+          <h1>Tecnologias</h1>
+        </div>
+        <div class="technologies">
+          <img src="icons/react.png" />
+          <img src="icons/javascript.png" />
+          <img src="icons/bootstrap.png" />
+          <img src="icons/html.png" />
+          <img src="icons/css.png" />
+          <img src="icons/python.png" />
+        </div>
+        <div class="title" id="projects">
+          <h1>Projetos</h1>
+        </div>
+        <div class="projects">
+          <div class="col">
+            <div class="project-image">
+              <img src="./icons/news.png" />
+            </div>
+            <div class="project-information">
+              <h1 class="project-title">News</h1>
+              <p class="project-paragraph">
+                Uma página feita para que se possa ficar atualizado com as
+                notícias ao redor do mundo. Para a sua criação foi usado
+                <strong
+                  >JavaScript, HTML, CSS e três APIs:
+                  <a href="https://gnews.io/docs/v4" target="_blank">NewsAPI</a
+                  >,
+                  <a href="https://www.weatherapi.com/docs/" target="_blank"
+                    >WeatherAPI</a
+                  >
+                  e
+                  <a
+                    href="https://docs.awesomeapi.com.br/api-de-moedas"
+                    target="_blank"
+                    >MarketAPI</a
+                  ></strong
+                >.
+              </p>
+              <p class="project-paragraph">
+                A página tem como função mostrar as notícias em alta nos Estados
+                Unidos e também no Brasil, mostrar o clima no local atual do
+                usuário e em três outras capitais do Brasil e as cotações das
+                moedas de vários países.
+              </p>
+              <div class="project-acess">
+                <div class="acess-info">
+                  <img src="icons/github.svg" />
+                  <a
+                    href="https://github.com/genilson-alves/news"
+                    target="_blank"
+                    >Repositório</a
+                  >
+                </div>
+                <div class="acess-info">
+                  <img src="icons/internet.png" />
+                  <a href="https://news-two-lemon.vercel.app" target="_blank"
+                    >Deploy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="project-image">
+              <img src="./icons/anime-search.png" />
+            </div>
+            <div class="project-information">
+              <h1 class="project-title">Anime Search</h1>
+              <p class="project-paragraph">
+                Esse projeto foi criado principalmente para que eu pudesse
+                estudar novas tecnologias e aprender novas técnicas. Para a sua
+                criação foi usado
+                <strong
+                  >ReactJS, Bootstrap e a API
+                  <a href="https://docs.api.jikan.moe/" target="_blank"
+                    >Jikan</a
+                  ></strong
+                >.
+              </p>
+              <p class="project-paragraph">
+                Essa página tem como função principal mostrar os animes que
+                estão sendo transmitidos na temporada, realizar pesquisas e ver
+                o ranking geral de animes e mangás.
+              </p>
+              <p class="project-paragraph">
+                Todas as informações disponibilizadas no site
+                <a href="https://myanimelist.net/" target="_blank"
+                  >MyAnimeList</a
+                >.
+              </p>
+              <div class="project-acess">
+                <div class="acess-info">
+                  <img src="icons/github.svg" />
+                  <a
+                    href="https://github.com/genilson-alves/anime-search"
+                    target="_blank"
+                    >Repositório</a
+                  >
+                </div>
+                <div class="acess-info">
+                  <img src="icons/internet.png" />
+                  <a
+                    href="https://anime-search-gray.vercel.app/"
+                    target="_blank"
+                    >Deploy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">Em breve...</div>
+        </div>
+        <div class="more">
+          <a
+            href="https://github.com/genilson-alves?tab=repositories"
+            target="_blank"
+            >Veja mais</a
+          >
+        </div>
+        <div class="title" id="contacts">
+          <h1>Contato</h1>
+        </div>
+        <div class="contact">
+          <div class="contact-text">
+            <h2>Onde me encontrar:</h2>
+          </div>
+          <div class="contact-information">
+            <div class="contact-me">
+              <img src="icons/linkedin.svg" />
+              <a
+                href="https://www.linkedin.com/in/genilson-alves0/"
+                target="_blank"
+              >
+                Genilson Alves Ferreira da Silva
+              </a>
+            </div>
+            <div class="contact-me">
+              <img src="icons/github.svg" />
+              <a href="https://github.com/genilson-alves" target="_blank"
+                >genilson-alves</a
+              >
+            </div>
+            <div class="contact-me">
+              <img src="icons/gmail.png" />
+              genilson.alves9555@gmail.com
+            </div>
+            <div class="contact-me">
+              <img src="icons/whatsapp.png" />
+              +55 41 9 8531-9395
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="copyright">
+        <p>Design and Code &copy; 2023 Genilson</p>
+      </footer>
+    </div>
+    <div class="english">
+      <main class="main-page" id="main-page">
+        <div class="title" id="about">
+          <h1>Hello.</h1>
+          <h2>Welcome!</h2>
+        </div>
+        <div class="main-content">
+          <div class="information-image"></div>
+          <div class="information">
+            <h1 class="information-title">Front-end Developer</h1>
+            <p class="information-content">
+              My name is Genilson and I am a Front-end Developer focused on
+              <strong>JavaScript and ReactJS</strong>.
             </p>
-            <p class="project-paragraph">
-              A página tem como função mostrar as notícias em alta nos Estados
-              Unidos e também no Brasil, mostar o clima no local atual do
-              usuário e em três outras capitais do Brasil e as cotações das
-              moedas de vários países.
-            </p>
+          </div>
+        </div>
+        <div class="title" id="technologies">
+          <h1>Technologies</h1>
+        </div>
+        <div class="technologies">
+          <img src="icons/react.png" />
+          <img src="icons/javascript.png" />
+          <img src="icons/bootstrap.png" />
+          <img src="icons/html.png" />
+          <img src="icons/css.png" />
+          <img src="icons/python.png" />
+        </div>
+        <div class="title" id="projects">
+          <h1>Project</h1>
+        </div>
+        <div class="projects">
+          <div class="col">
+            <div class="project-image">
+              <img src="./icons/news.png" />
+            </div>
+            <div class="project-information">
+              <h1 class="project-title">News</h1>
+              <p class="project-paragraph">
+                This a news website to keep the users updated with the news. To
+                it's creating I used
+                <strong
+                  >JavaScript, HTML, CSS e três APIs:
+                  <a href="https://gnews.io/docs/v4" target="_blank">NewsAPI</a
+                  >,
+                  <a href="https://www.weatherapi.com/docs/" target="_blank"
+                    >WeatherAPI</a
+                  >
+                  e
+                  <a
+                    href="https://docs.awesomeapi.com.br/api-de-moedas"
+                    target="_blank"
+                    >MarketAPI</a
+                  ></strong
+                >.
+              </p>
+              <p class="project-paragraph">
+                The page has as function to show the trending news in USA and
+                also in Brazil, the weather in current location of the user and
+                also in other three capitals of Brazil, besides the coin
+                cotation of various countries.
+              </p>
 
-            <div class="project-acess">
-              <div class="acess-info">
-                <img src="icons/github.svg" />
-                <a href="https://github.com/genilson-alves/news" target="_blank"
-                  >Repositório</a
-                >
-              </div>
-              <div class="acess-info">
-                <img src="icons/internet.png" />
-                <a href="https://news-two-lemon.vercel.app" target="_blank"
-                  >Deploy</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="project-image">
-            <img src="./icons/anime-search.png" />
-          </div>
-          <div class="project-information">
-            <h1 class="project-title">Anime Search</h1>
-            <p class="project-paragraph">
-              Esse projeto foi criado principalmente para que eu pudesse estudar
-              novas tecnologias e aprender novas técnicas. Para a sua criação
-              foi usado
-              <strong
-                >ReactJS, Bootstrap e a API
-                <a href="https://docs.api.jikan.moe/" target="_blank"
-                  >Jikan</a
-                ></strong
-              >.
-            </p>
-            <p class="project-paragraph">
-              Essa página tem como função principal mostrar os animes que estão
-              sendo transmitidos na temporada, realizar pesquisas e ver o
-              ranking geral de animes e mangás.
-            </p>
-            <p class="project-paragraph">
-              Todas as informações disponibilizadas no site
-              <a href="https://myanimelist.net/" target="_blank">MyAnimeList</a
-              >.
-            </p>
-            <div class="project-acess">
-              <div class="acess-info">
-                <img src="icons/github.svg" />
-                <a
-                  href="https://github.com/genilson-alves/anime-search"
-                  target="_blank"
-                  >Repositório</a
-                >
-              </div>
-              <div class="acess-info">
-                <img src="icons/internet.png" />
-                <a href="https://anime-search-gray.vercel.app/" target="_blank"
-                  >Deploy</a
-                >
+              <div class="project-acess">
+                <div class="acess-info">
+                  <img src="icons/github.svg" />
+                  <a
+                    href="https://github.com/genilson-alves/news"
+                    target="_blank"
+                    >Repository</a
+                  >
+                </div>
+                <div class="acess-info">
+                  <img src="icons/internet.png" />
+                  <a href="https://news-two-lemon.vercel.app" target="_blank"
+                    >Deploy</a
+                  >
+                </div>
               </div>
             </div>
           </div>
+          <div class="col">
+            <div class="project-image">
+              <img src="./icons/anime-search.png" />
+            </div>
+            <div class="project-information">
+              <h1 class="project-title">Anime Search</h1>
+              <p class="project-paragraph">
+                This project was created mainly for me to learn new technologies
+                and new techniques. To it creating was used
+                <strong
+                  >ReactJS, Bootstrap e a API
+                  <a href="https://docs.api.jikan.moe/" target="_blank"
+                    >Jikan</a
+                  ></strong
+                >.
+              </p>
+              <p class="project-paragraph">
+                The page has as main function to show the current season airing
+                animes, to make searches and see the general ranking of animes
+                and mangas.
+              </p>
+              <p class="project-paragraph">
+                All the information are from the
+                <a href="https://myanimelist.net/" target="_blank"
+                  >MyAnimeList</a
+                >
+                website.
+              </p>
+              <div class="project-acess">
+                <div class="acess-info">
+                  <img src="icons/github.svg" />
+                  <a
+                    href="https://github.com/genilson-alves/anime-search"
+                    target="_blank"
+                    >Repository</a
+                  >
+                </div>
+                <div class="acess-info">
+                  <img src="icons/internet.png" />
+                  <a
+                    href="https://anime-search-gray.vercel.app/"
+                    target="_blank"
+                    >Deploy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">Soon...</div>
         </div>
-        <div class="col">Em breve...</div>
-      </div>
-      <div class="more">
-        <a
-          href="https://github.com/genilson-alves?tab=repositories"
-          target="_blank"
-          >Veja mais</a
-        >
-      </div>
-      <div class="title" id="contacts">
-        <h1>Contato</h1>
-      </div>
-      <div class="contact">
-        <div class="contact-text">
-          <h2>Onde me encontrar:</h2>
+        <div class="more">
+          <a
+            href="https://github.com/genilson-alves?tab=repositories"
+            target="_blank"
+            >More</a
+          >
         </div>
-        <div class="contact-information">
-          <div class="contact-me">
-            <img src="icons/linkedin.svg" />
-            <a
-              href="https://www.linkedin.com/in/genilson-alves0/"
-              target="_blank"
-            >
-              Genilson Alves Ferreira da Silva
-            </a>
+        <div class="title" id="contacts">
+          <h1>Contact</h1>
+        </div>
+        <div class="contact">
+          <div class="contact-text">
+            <h2>How to find me:</h2>
           </div>
-          <div class="contact-me">
-            <img src="icons/github.svg" />
-            <a href="https://github.com/genilson-alves" target="_blank"
-              >genilson-alves</a
-            >
-          </div>
-          <div class="contact-me">
-            <img src="icons/gmail.png" />
-            genilson.alves9555@gmail.com
-          </div>
-          <div class="contact-me">
-            <img src="icons/whatsapp.png" />
-            +55 41 9 8531-9395
+          <div class="contact-information">
+            <div class="contact-me">
+              <img src="icons/linkedin.svg" />
+              <a
+                href="https://www.linkedin.com/in/genilson-alves0/"
+                target="_blank"
+              >
+                Genilson Alves Ferreira da Silva
+              </a>
+            </div>
+            <div class="contact-me">
+              <img src="icons/github.svg" />
+              <a href="https://github.com/genilson-alves" target="_blank"
+                >genilson-alves</a
+              >
+            </div>
+            <div class="contact-me">
+              <img src="icons/gmail.png" />
+              genilson.alves9555@gmail.com
+            </div>
+            <div class="contact-me">
+              <img src="icons/whatsapp.png" />
+              +55 41 9 8531-9395
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer class="copyright">
-      <p>Design and Code &copy; 2023 Genilson</p>
-    </footer>
+      </main>
+      <footer class="copyright">
+        <p>Design and Code &copy; 2023 Genilson</p>
+      </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -5,6 +5,14 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.english {
+  display: none;
+}
+
+.brazil-flag {
+  display: none;
+}
+
 :root {
   --background-color: #ffffff;
   --text-color: #001d3d;
@@ -132,7 +140,6 @@ a {
   width: 60%;
   margin: 20px;
   padding: 10px;
-  overflow: scroll;
 }
 
 .project-title {
