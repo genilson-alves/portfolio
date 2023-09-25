@@ -19,6 +19,12 @@ document.querySelector("[data-english-flag]").addEventListener("click", () => {
 
 if (portugueseBttn) {
   document.querySelector("[data-brazil-flag]").addEventListener("click", () => {
+    document.querySelector("[data-nav-logo]").textContent = "Eu.eu";
+    document.querySelector("[data-nav-about]").textContent = "Sobre";
+    document.querySelector("[data-nav-technologies]").textContent =
+      "Tecnologias";
+    document.querySelector("[data-nav-projects]").textContent = "Projetos";
+    document.querySelector("[data-nav-contact]").textContent = "Contato";
     document.querySelector(".portuguese").style.display = "block";
     document.querySelector(".english").style.display = "none";
     document.querySelector("[data-english-flag]").style.display = "block";
