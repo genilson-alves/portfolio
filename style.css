@@ -7,6 +7,11 @@
 
 .english {
   display: none;
+  padding-bottom: 10px;
+}
+
+.portuguese {
+  padding-bottom: 10px;
 }
 
 .brazil-flag {
@@ -189,12 +194,6 @@ a {
 .contact-me {
   display: flex;
   gap: 10px;
-}
-
-.copyright {
-  text-align: center;
-  font-style: italic;
-  margin: 10px;
 }
 
 .contact-me img {
